@@ -21,4 +21,5 @@ async def send_hi():
         await channel.send("*hi")
 
 webserver.keep_alive()
-bot.run("DISCORD_TOKEN")
+bot.run(DISCORD_TOKEN)
+
