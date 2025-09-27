@@ -14,7 +14,7 @@ async def on_ready():
     print(f"Logged in as {bot.user}")
     send_hi.start()  # start the loop when bot is ready
 
-@tasks.loop(minutes=10)
+@tasks.loop(minutes=3)
 async def send_hi():
     channel = bot.get_channel(CHANNEL_ID)
     if channel:
@@ -22,4 +22,5 @@ async def send_hi():
 
 webserver.keep_alive()
 bot.run(DISCORD_TOKEN)
+
 
